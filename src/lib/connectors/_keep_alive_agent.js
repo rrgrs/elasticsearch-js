@@ -1,8 +1,8 @@
 var ForeverAgent = require('forever-agent');
 var ForeverSSLAgent = require('forever-agent').SSL;
 
-var NativeAgent = require('http').Agent;
-var NativeSSLAgent = require('https').Agent;
+var NativeAgent = require('agentkeepalive');
+var NativeSSLAgent = require('agentkeepalive').HttpsAgent;
 
 var inherits = require('util').inherits;
 var nativeKeepAlive = (function () {
